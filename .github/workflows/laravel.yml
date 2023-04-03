@@ -66,15 +66,16 @@ jobs:
         run: ./vendor/bin/phpunit
 
       - name: Deploy production
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
         run: echo ok
-        #run: |
-        #  curl --request POST \
-        #  --url ${{ secrets.DEPLOY_WEBHOOK_PROD }} \
-        #  --header 'content-type: application/json'
+#        run: |
+#          curl --request POST \
+#          --url ${{ secrets.DEPLOY_WEBHOOK_PROD }} \
+#          --header 'content-type: application/json'
 
       - name: Deploy dev
         if: github.ref == 'refs/heads/dev'
-        uses: Glennmen/ploi-deploy-action@v1.2.0
-        with:
-          webhook_url: ${{ secrets.DEPLOY_WEBHOOK_DEV }}
+        run: echo ok
+#        uses: Glennmen/ploi-deploy-action@v1.2.0
+#        with:
+#          webhook_url: ${{ secrets.DEPLOY_WEBHOOK_DEV }}
