@@ -1,8 +1,8 @@
 {
-    "name": "laravel/laravel",
+    "name": "lucasjose501/autologr",
     "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "description": "AutoLogr é um aplicativo web de registro e gerenciamento de informações de veículos pessoais, permitindo aos usuários acompanhar e analisar estatísticas de consumo de combustível, manutenção, reparos e muito mais.",
+    "keywords": ["fuel", "vehicle", "car", "motorcycle", "maintenance", "expense", "mileage", "management", "statistics", "register", "autologr"],
     "license": "MIT",
     "require": {
         "php": "^8.1",
@@ -13,11 +13,14 @@
         "laravel/tinker": "^2.8"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.8",
+        "brianium/paratest": "^7.1",
         "fakerphp/faker": "^1.9.1",
         "laravel/pint": "^1.0",
         "laravel/sail": "^1.18",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^7.0",
+        "nunomaduro/larastan": "^2.5",
         "phpunit/phpunit": "^10.0",
         "spatie/laravel-ignition": "^2.0"
     },
@@ -46,6 +49,9 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
+        ],
+        "phpstan": [
+            "./vendor/bin/phpstan analyse -c phpstan.neon --no-ansi"
         ]
     },
     "extra": {

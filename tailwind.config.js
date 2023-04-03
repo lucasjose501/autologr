@@ -13,6 +13,12 @@ module.exports = {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            fontSize: {
+                xxs: ['0.675rem', {lineHeight: '1rem'}]
+            },
+            borderWidth: {
+                3: '3px'
+            }
         },
     },
 

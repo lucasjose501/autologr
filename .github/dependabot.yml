@@ -1,0 +1,30 @@
+version: 2
+updates:
+- package-ecosystem: github-actions
+  directory: "/"
+  schedule:
+    interval: montly
+    day: tuesday
+    timezone: America/Sao_Paulo
+    time: '09:30'
+  open-pull-requests-limit: 10
+
+- package-ecosystem: composer
+  directory: "/"
+  schedule:
+    interval: montly
+    day: tuesday
+    timezone: America/Sao_Paulo
+    time: '09:40'
+  open-pull-requests-limit: 10
+  versioning-strategy: increase
+
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: montly
+    day: tuesday
+    timezone: America/Sao_Paulo
+    time: '09:50'
+  open-pull-requests-limit: 10
+  versioning-strategy: increase
